@@ -1,7 +1,28 @@
-= MOBY DICK; or, THE WHALE
+= Moby Dick; or, The Whale
 Herman Melville
-
+v0.0.1
 :toc:
+
+[colophon]
+== Copyright
+
+This edition of _Moby Dick; or, The Whale_ is maintained, archived, and curated as part of
+the GITENBERG PROJECT.
+
+This work is in the public domain.
+
+If you find any issues with this work, please report them at
+https://github.com/GITenberg/Moby-Dick--Or-The-Whale_2701/issues
+
++
+
+Cover provided by Recovering the Classics
+
+Artist: Adam S. Doyle, (C) 2013
+
+Made available under a Creative Commons Attribution-NonCommercial 4.0 license
+
+https://creativecommons.org/licenses/by-nc/4.0/
 
 
 == Original Transcriber's Notes:
@@ -16,7 +37,7 @@ was compared with a public domain hard copy version of the text.
 In chapters 24, 89, and 90, we substituted a capital L for the symbol
 for the British pound, a unit of currency.
 
- 
+
 == ETYMOLOGY.
 
 (Supplied by a Late Consumptive Usher to a Grammar School)
