@@ -4,7 +4,7 @@ before_install:
 - gem install asciidoctor tilt
 - sudo apt-get install xsltproc
 script:
-- git clone https://github.com/rdhyee/asciidoctor-htmlbook.git
+- git clone https://github.com/sethwoodworth/asciidoctor-htmlbook.git
 - asciidoctor -a toc -b xhtml5 -d book -T ./asciidoctor-htmlbook/htmlbook-autogen/
   -d book Moby-Dick.asciidoc -o Moby-Dick.html
 - git clone https://github.com/sethwoodworth/HTMLBook
@@ -17,4 +17,10 @@ script:
 branches:
   only:
   - master
-    # skip_cleanup: true
+deploy:
+  provider: releases
+  api_key:
+    secure: c4mxFxgpmvVQiUK7CGxvf4UF2FTTpROZBDNJW2fbFIPm7sapo+ywiw0eduWp2W7vkwm/BPJxCPPIyj/NS8Ou+FPkX3lcz/f4xW1RzCqG2zSiexg0rBy2oa62I3ZTW170VdDJCd3UArmDutuYLVrDgY4kuVJqJMOeza0SY5h1NI2gOqh232rA1R/eddZfQ5OAD7fX92z+UvLVmYzm3UPO40R24QxwQr/1V1R0S+khS2M4w071AqR8dpWLWD7xvJ6VNWHuI5gaqoNEuzSA5VKvUAjc1zDGdL0675kLatjAOzeruaRksS4Vcz+XJ8jlboa01NhOAyqh9FE3sF09fu4ViRxuOk+cZ1L95e0l/pN/OwSTIab+JAddmwRhlmoBdTxYibQMWKgRxjEwgSLVUWve1m2DJwh78KNXQG5eURBrfyJKhWegqlmH2bgEdIVNtkR436EdDfG9RgE6wMJCcRyA/MHDeun5CnpCQdlIig2RBGyMZnfAx5hhsSK4qTaH5u1qSdOqY5dHnNYzqAGHqWRI5d6Y0N6ptHr4F8ql9ACz7fTzGlWCIpcIAzNJpJrN/gsUleETs5GikA0RtdyKHWw7aLEROLe6GRKSkT8C6lreaPkQkwIizVLovMhKMrQBdFG+iUU2toEZKZt8gUJ3jMD72+M4DKEKz0nNgCZYhkQFdYA=
+  file: Moby-Dick.epub
+  on:
+    repo: sethwoodworth/Moby-Dick--Or-The-Whale_2701
