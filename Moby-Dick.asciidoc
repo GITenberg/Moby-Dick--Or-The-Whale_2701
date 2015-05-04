@@ -1,6 +1,6 @@
 = Moby Dick; or, The Whale
 Herman Melville
-v0.0.2
+v0.0.3
 :toc:
 
 [colophon]
