@@ -26,15 +26,15 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Psychological fiction'
-- '!lcsh:Adventure stories'
-- '!lcsh:Whales -- Fiction'
-- '!lcsh:Ahab, Captain (Fictitious character) -- Fiction'
-- '!lcc:PS'
-- '!lcsh:Whaling ships -- Fiction'
-- '!lcsh:Whaling -- Fiction'
-- '!lcsh:Sea stories'
-- '!lcsh:Mentally ill -- Fiction'
-- '!lcsh:Ship captains -- Fiction'
+- '!lcc: PS'
+- '!lcsh: Psychological fiction'
+- '!lcsh: Whaling ships -- Fiction'
+- '!lcsh: Whales -- Fiction'
+- '!lcsh: Whaling -- Fiction'
+- '!lcsh: Adventure stories'
+- '!lcsh: Ahab, Captain (Fictitious character) -- Fiction'
+- '!lcsh: Ship captains -- Fiction'
+- '!lcsh: Sea stories'
+- '!lcsh: Mentally ill -- Fiction'
 title: Moby Dick; Or, The Whale
 url: http://www.gutenberg.org/ebooks/2701
