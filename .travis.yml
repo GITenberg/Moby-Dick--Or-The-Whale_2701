@@ -14,7 +14,7 @@ script:
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi 
-- mv book.epub Moby-Dick;-Or,-The-Whale.epub
+- mv book.epub Moby-Dick-Or-The-Whale.epub
 branches:
   only:
   - master
@@ -22,8 +22,8 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key:
-    secure: GkPm/E3mezkFhG3Rdc9CTof6DrB/9RDz6iRiLM5U0nduhuAqER1xiS1SzyZscqbf+dNyudk1Juzz14Y9owKMlHef+5E040Py2SUkGqZKZ3NG+97jPJXc8UrKR/q0lykjoNTyiF8Kqr1IYOiImx/1ToU7TvHlHYVnXSwEZkygz4XzJc+UYSYVLwiiNv11x2hj2qE+RA1sWs5F95hHW+uouJYnoqiL6UXz4EXDBPix3lAOZENWrJ6v/L9tlgALchC4WQYQmWHE0g3jAI8D8B5P0QS+4Q5nwTSyfCzjEtY4TtiiygFel3ghNcqpvQasm5uiFntLO0zz4trcxiR0HfIpCyjGwZsEcfoPuiclhh83RYuzuUDCXaRZ4Nhiy03qryquzhkxueteCE0tgZ5MiV6FXCMYzj++nz8XHJ8oKU4ARNqbwFUmKdfOn9NYCPD2FLcdhBBmIRDw3cWzQEO+4G5a2dwgYpWTMu4/3ffFvjzynEm8JV+IdiGN2LDnPJ1K0J2qMfKS0kBtRLiAciluMKqYoq1nizC5WU/LO0byqdG15QMAW6m8vKohZSSjZ5tD14mkR78Yn4une/MjKOC7V7B+d52zxaz0KTYgjMSavqInwO2nAqVnPgvlvUCBlD3MYcEHUlbpUUFSJW2RYvypVQR8r4hbKiG6evuaYnjUafIIg6o=
-  file: Moby-Dick;-Or,-The-Whale.epub
+    secure: QmqyrWVJbx8gvFoQbiLjvX4VYg2+P+GzMzflAlXwohZaYYBM/QPcTMVpVgSTMDwwiDLwroCvKeyk4b5jJk4KmoUUF//kmOZGSSTAPYG6VJMlb70gVkg9U4ELoBRQdNKWK6DLdKn1Mb+opgJTvgVSfgiJQEFCQsrYuXur4TQL5PcGw21F91R3SV9HTr+W+W1D02Oa40onVuSv7MKzq/BtSzfKv6CGIZrRcRzOpxQKfq3QKyxoVHALywbK8IXeCZ40/F/kw4/BM1JyAvw3ycKpGxjLBM8cuICHlewERGzyj2NiZZ2OtEWBsO/a+RyQl3KdGAVqEcj9yICvlul7t4Srx9zg6E7ROp4Yvq8VdbrSG7C+4cdPSxWBpkBFOBH/SxP/35fPJFZfB9lAfBi+9N5hun1BlCEg00TtfCGLKphw5hjVamHvwhHa+3bXIjvLw//XIryMoCU0i+k7jAE52IhGlyW0yR6oRbPMEshi2Jy4Fg61KUFhh7+LdVOC3egydy4PH4fBUo29ZmF1il8SbXx/y1deFHFxdsip1vsreOkks3UEF4bGh/n4w+MWHGXS6feky0Bdk+KTgZQ76sc8GRIAFCTf/ydsRHhFWRwnjjdd0ohI5ABarWd74l/H+HS2P+8npgI6vNhj/AHaA4ngIaGNHKm3KKDvbPujCpMXBNdRovQ=
+  file: Moby-Dick-Or-The-Whale.epub
   "on":
     repo: GITenberg/Moby-Dick--Or-The-Whale_2701
 addons:
