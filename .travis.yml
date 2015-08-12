@@ -22,7 +22,7 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key:
-    secure: QmqyrWVJbx8gvFoQbiLjvX4VYg2+P+GzMzflAlXwohZaYYBM/QPcTMVpVgSTMDwwiDLwroCvKeyk4b5jJk4KmoUUF//kmOZGSSTAPYG6VJMlb70gVkg9U4ELoBRQdNKWK6DLdKn1Mb+opgJTvgVSfgiJQEFCQsrYuXur4TQL5PcGw21F91R3SV9HTr+W+W1D02Oa40onVuSv7MKzq/BtSzfKv6CGIZrRcRzOpxQKfq3QKyxoVHALywbK8IXeCZ40/F/kw4/BM1JyAvw3ycKpGxjLBM8cuICHlewERGzyj2NiZZ2OtEWBsO/a+RyQl3KdGAVqEcj9yICvlul7t4Srx9zg6E7ROp4Yvq8VdbrSG7C+4cdPSxWBpkBFOBH/SxP/35fPJFZfB9lAfBi+9N5hun1BlCEg00TtfCGLKphw5hjVamHvwhHa+3bXIjvLw//XIryMoCU0i+k7jAE52IhGlyW0yR6oRbPMEshi2Jy4Fg61KUFhh7+LdVOC3egydy4PH4fBUo29ZmF1il8SbXx/y1deFHFxdsip1vsreOkks3UEF4bGh/n4w+MWHGXS6feky0Bdk+KTgZQ76sc8GRIAFCTf/ydsRHhFWRwnjjdd0ohI5ABarWd74l/H+HS2P+8npgI6vNhj/AHaA4ngIaGNHKm3KKDvbPujCpMXBNdRovQ=
+    secure: xxxx
   file: Moby-Dick-Or-The-Whale.epub
   "on":
     repo: GITenberg/Moby-Dick--Or-The-Whale_2701
