@@ -1,19 +1,20 @@
 language: ruby
-sudo: required
 before_install:
 - gem install asciidoctor tilt
-- sudo apt-get install xsltproc
 script:
-- git clone https://github.com/sethwoodworth/asciidoctor-htmlbook.git
-- asciidoctor -a toc -b xhtml5 -d book -T ./asciidoctor-htmlbook/htmlbook-autogen/
-  -d book Moby-Dick.asciidoc -o Moby-Dick.html
-- git clone https://github.com/sethwoodworth/HTMLBook
-- xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl
-  Moby-Dick.html
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- asciidoctor -a toc,version=$VERSION -b xhtml5 -T ./asciidoctor-htmlbook/htmlbook-autogen/
+  -d book book.asciidoc -o book.html
+- git clone https://github.com/gitenberg-dev/HTMLBook
+- xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.png OEBPS/cover.png
-- zip -rX Moby-Dick.epub mimetype
-- zip -rX Moby-Dick.epub OEBPS/ META-INF/
+- cp cover.jpg OEBPS/cover.jpg
+- if test -d "./images"; then mv ./images ./OEBPS/ ;fi
+- zip -rX book.epub mimetype
+- zip -rX book.epub OEBPS/ META-INF/
+- if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi 
+- mv book.epub Moby-Dick;-Or,-The-Whale.epub
 branches:
   only:
   - master
@@ -21,7 +22,11 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key:
-    secure: c4mxFxgpmvVQiUK7CGxvf4UF2FTTpROZBDNJW2fbFIPm7sapo+ywiw0eduWp2W7vkwm/BPJxCPPIyj/NS8Ou+FPkX3lcz/f4xW1RzCqG2zSiexg0rBy2oa62I3ZTW170VdDJCd3UArmDutuYLVrDgY4kuVJqJMOeza0SY5h1NI2gOqh232rA1R/eddZfQ5OAD7fX92z+UvLVmYzm3UPO40R24QxwQr/1V1R0S+khS2M4w071AqR8dpWLWD7xvJ6VNWHuI5gaqoNEuzSA5VKvUAjc1zDGdL0675kLatjAOzeruaRksS4Vcz+XJ8jlboa01NhOAyqh9FE3sF09fu4ViRxuOk+cZ1L95e0l/pN/OwSTIab+JAddmwRhlmoBdTxYibQMWKgRxjEwgSLVUWve1m2DJwh78KNXQG5eURBrfyJKhWegqlmH2bgEdIVNtkR436EdDfG9RgE6wMJCcRyA/MHDeun5CnpCQdlIig2RBGyMZnfAx5hhsSK4qTaH5u1qSdOqY5dHnNYzqAGHqWRI5d6Y0N6ptHr4F8ql9ACz7fTzGlWCIpcIAzNJpJrN/gsUleETs5GikA0RtdyKHWw7aLEROLe6GRKSkT8C6lreaPkQkwIizVLovMhKMrQBdFG+iUU2toEZKZt8gUJ3jMD72+M4DKEKz0nNgCZYhkQFdYA=
-  file: Moby-Dick.epub
-  on:
-    repo: sethwoodworth/Moby-Dick--Or-The-Whale_2701
+    secure: GkPm/E3mezkFhG3Rdc9CTof6DrB/9RDz6iRiLM5U0nduhuAqER1xiS1SzyZscqbf+dNyudk1Juzz14Y9owKMlHef+5E040Py2SUkGqZKZ3NG+97jPJXc8UrKR/q0lykjoNTyiF8Kqr1IYOiImx/1ToU7TvHlHYVnXSwEZkygz4XzJc+UYSYVLwiiNv11x2hj2qE+RA1sWs5F95hHW+uouJYnoqiL6UXz4EXDBPix3lAOZENWrJ6v/L9tlgALchC4WQYQmWHE0g3jAI8D8B5P0QS+4Q5nwTSyfCzjEtY4TtiiygFel3ghNcqpvQasm5uiFntLO0zz4trcxiR0HfIpCyjGwZsEcfoPuiclhh83RYuzuUDCXaRZ4Nhiy03qryquzhkxueteCE0tgZ5MiV6FXCMYzj++nz8XHJ8oKU4ARNqbwFUmKdfOn9NYCPD2FLcdhBBmIRDw3cWzQEO+4G5a2dwgYpWTMu4/3ffFvjzynEm8JV+IdiGN2LDnPJ1K0J2qMfKS0kBtRLiAciluMKqYoq1nizC5WU/LO0byqdG15QMAW6m8vKohZSSjZ5tD14mkR78Yn4une/MjKOC7V7B+d52zxaz0KTYgjMSavqInwO2nAqVnPgvlvUCBlD3MYcEHUlbpUUFSJW2RYvypVQR8r4hbKiG6evuaYnjUafIIg6o=
+  file: Moby-Dick;-Or,-The-Whale.epub
+  "on":
+    repo: GITenberg/Moby-Dick--Or-The-Whale_2701
+addons:
+  apt:
+    packages:
+    - xsltproc
