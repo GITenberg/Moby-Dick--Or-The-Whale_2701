@@ -1,5 +1,5 @@
 _repo: Moby-Dick--Or-The-Whale_2701
-_version: 0.0.3
+_version: 0.1.0
 covers:
 - attribution: Black Dwarf Designs, 2015
   cover_type: original
@@ -38,5 +38,6 @@ subjects:
 - '!lcsh: Ship captains -- Fiction'
 - '!lcsh: Sea stories'
 - '!lcsh: Mentally ill -- Fiction'
+- GITenberg
 title: Moby Dick; Or, The Whale
 url: http://www.gutenberg.org/ebooks/2701
