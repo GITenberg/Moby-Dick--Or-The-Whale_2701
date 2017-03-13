@@ -1,5 +1,5 @@
 _repo: Moby-Dick--Or-The-Whale_2701
-_version: 0.2.2
+_version: 0.2.3
 covers:
 - attribution: Black Dwarf Designs, 2015
   cover_type: original
@@ -17,6 +17,8 @@ creator:
     wikipedia: http://en.wikipedia.org/wiki/Herman_Melville
 description: 'See also Etext #2489, Etext #15, and a computer-generated audio file,
   Etext #9147.'
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/2701#Moby-Dick--Or-The-Whale
 gutenberg_bookshelf: Best Books Ever Listings
 gutenberg_issued: '2001-07-01'
 gutenberg_type: Text
